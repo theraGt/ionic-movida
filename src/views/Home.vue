@@ -386,7 +386,7 @@ const allActivities = ref<Activity[]>([]);
 const allVisitas = ref<Visita[]>([]);
 const allVoluntarios = ref<Voluntario[]>([]);
 
-const API_URL = 'https://thera-ia-api-movida-app.9zx1zd.easypanel.host/';
+const API_URL = 'https://thera-ia-api-movida-app.9zx1zd.easypanel.host';
 
 const chartColors = ['#E8913A', '#3b82f6', '#10b981', '#8b5cf6', '#f59e0b', '#ef4444', '#ec4899', '#6366f1'];
 

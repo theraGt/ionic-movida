@@ -323,7 +323,7 @@ import {
 } from 'ionicons/icons';
 import { Visita } from '@/types/visita';
 
-const API_URL = 'https://thera-ia-api-movida-app.9zx1zd.easypanel.host/';
+const API_URL = 'https://thera-ia-api-movida-app.9zx1zd.easypanel.host';
 
 const props = defineProps<{
   isOpen: boolean;

@@ -61,7 +61,7 @@ import {
 import { ellipsisHorizontal, trashOutline, createOutline, eyeOutline } from 'ionicons/icons';
 import { Activity } from '../../types/activity';
 
-const API_URL = 'https://thera-ia-api-movida-app.9zx1zd.easypanel.host/';
+const API_URL = 'https://thera-ia-api-movida-app.9zx1zd.easypanel.host';
 
 const props = defineProps<{
     activities: Activity[],

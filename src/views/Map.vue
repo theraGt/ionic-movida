@@ -277,7 +277,7 @@ const selectedVisita = ref<Visita | null>(null);
 const mapCenter = ref<[number, number]>([-90.5069, 14.6349]);
 const mapZoom = ref(12);
 const visitas = ref<Visita[]>([]);
-const API_URL = 'https://thera-ia-api-movida-app.9zx1zd.easypanel.host/';
+const API_URL = 'https://thera-ia-api-movida-app.9zx1zd.easypanel.host';
 
 // Convertir visitas a MapLocation
 const visitasAsLocations = computed((): MapLocation[] => {

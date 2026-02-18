@@ -212,7 +212,7 @@ import ActivityDetailPanel from '@/components/activities/ActivityDetailPanel.vue
 // Lógica y Tipos
 import { Activity } from '@/types/activity';
 
-const API_URL = 'https://thera-ia-api-movida-app.9zx1zd.easypanel.host/';
+const API_URL = 'https://thera-ia-api-movida-app.9zx1zd.easypanel.host';
 
 const activities = ref<Activity[]>([]);
 const filteredActivities = ref<Activity[]>([]);

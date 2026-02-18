@@ -202,7 +202,7 @@ const clearDateFilter = () => {
   updateFilterBadge();
 };
 
-const API_URL = 'https://thera-ia-api-movida-app.9zx1zd.easypanel.host/';
+const API_URL = 'https://thera-ia-api-movida-app.9zx1zd.easypanel.host';
 
 const fetchVisitas = async () => {
   try {

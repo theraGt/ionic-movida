@@ -118,7 +118,7 @@ import { blink } from '../../lib/blink';
 import { Visita } from '../../types/visita';
 import { computed } from 'vue';
 
-const API_URL = 'https://thera-ia-api-movida-app.9zx1zd.easypanel.host/';
+const API_URL = 'https://thera-ia-api-movida-app.9zx1zd.easypanel.host';
 
 const props = defineProps<{
   visitas: Visita[];
