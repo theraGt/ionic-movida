@@ -7,6 +7,7 @@ import Map from '../views/Map.vue'
 import Home from '../views/Home.vue'
 import Noticias from '../views/Noticias.vue'
 import Kiosco from '../views/Kiosco.vue'
+import CopilotoEmocional from '../views/CopilotoEmocional.vue'
 
 const routes: Array<RouteRecordRaw> = [
     {
@@ -40,6 +41,10 @@ const routes: Array<RouteRecordRaw> = [
     {
         path: '/kiosco',
         component: Kiosco
+    },
+    {
+        path: '/copiloto',
+        component: CopilotoEmocional
     }
 
 ]

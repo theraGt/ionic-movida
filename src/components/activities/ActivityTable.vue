@@ -279,4 +279,41 @@ ion-badge {
     background: #e0e7ff;
     color: #4f46e5;
 }
+
+/* Dark Mode */
+.dark .table-container {
+    background: #1f2937;
+    border-color: #374151;
+}
+
+.dark .custom-table th {
+    background: #374151;
+    color: #d1d5db;
+    border-bottom-color: #4b5563;
+}
+
+.dark .custom-table td {
+    border-bottom-color: #374151;
+    color: #d1d5db;
+}
+
+.dark .font-medium {
+    color: #f3f4f6;
+}
+
+.dark .font-bold {
+    color: #f3f4f6;
+}
+
+.dark .clickable-row:hover {
+    background-color: #374151;
+}
+
+.dark .empty-content {
+    color: #9ca3af;
+}
+
+.dark .filter-hint {
+    color: #6b7280;
+}
 </style>

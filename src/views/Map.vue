@@ -871,4 +871,95 @@ onMounted(() => {
     height: auto;
   }
 }
+
+/* Dark Mode */
+.dark .main-container {
+  background-color: #111827;
+}
+
+.dark .page-title {
+  color: #f3f4f6;
+}
+
+.dark .card-container {
+  background: #1f2937;
+  border-color: #374151;
+}
+
+.dark .card-header {
+  border-bottom-color: #374151;
+}
+
+.dark .card-title {
+  color: #f3f4f6;
+}
+
+.dark .stat-value {
+  color: #f0a85a;
+}
+
+.dark .stat-label {
+  color: #9ca3af;
+}
+
+.dark .active-filters {
+  border-bottom-color: #374151;
+}
+
+.dark .location-item:hover {
+  background: #374151;
+}
+
+.dark .location-item.is-selected {
+  background: #451a03;
+}
+
+.dark .location-name {
+  color: #f3f4f6;
+}
+
+.dark .location-meta {
+  color: #9ca3af;
+}
+
+.dark .location-coords {
+  color: #6b7280;
+}
+
+.dark .location-arrow {
+  color: #4b5563;
+}
+
+.dark .empty-state {
+  color: #9ca3af;
+}
+
+.dark .empty-icon {
+  color: #4b5563;
+}
+
+.dark .filter-section {
+  border-bottom-color: #374151;
+}
+
+.dark .filter-label {
+  color: #d1d5db;
+}
+
+.dark .filter-options ion-label {
+  color: #d1d5db;
+}
+
+.dark .filter-footer {
+  border-top-color: #374151;
+  background: #1f2937;
+}
+
+.dark .locations-list::-webkit-scrollbar-thumb {
+  background: #4b5563;
+}
+
+.dark .locations-list::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
 </style>

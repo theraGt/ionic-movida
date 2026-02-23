@@ -221,4 +221,28 @@ onUnmounted(() => {
   color: #6b7280;
   text-decoration: none;
 }
+
+/* Dark Mode */
+.dark :deep(.ol-control) {
+  background: rgba(31, 41, 55, 0.9);
+  border: 1px solid #374151;
+}
+
+.dark :deep(.ol-control button) {
+  background: #1f2937;
+  color: #d1d5db;
+  border-color: #374151;
+}
+
+.dark :deep(.ol-control button:hover) {
+  background: #374151;
+}
+
+.dark :deep(.ol-attribution) {
+  background: rgba(31, 41, 55, 0.9);
+}
+
+.dark :deep(.ol-attribution a) {
+  color: #9ca3af;
+}
 </style>

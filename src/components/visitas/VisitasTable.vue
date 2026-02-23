@@ -519,4 +519,76 @@ const handleDelete = async (id: string) => {
     grid-template-columns: 1fr;
   }
 }
+
+/* Dark Mode */
+.dark .month-name {
+  color: #f3f4f6;
+}
+
+.dark .month-count {
+  background: #374151;
+  color: #9ca3af;
+}
+
+.dark .visita-card {
+  background: #1f2937;
+  border-color: #374151;
+}
+
+.dark .image-container {
+  background: #374151;
+}
+
+.dark .image-placeholder {
+  background: linear-gradient(135deg, #374151 0%, #4b5563 100%);
+}
+
+.dark .visita-title {
+  color: #f3f4f6;
+}
+
+.dark .meta-item {
+  color: #9ca3af;
+}
+
+.dark .meta-icon {
+  color: #6b7280;
+}
+
+.dark .kpi-section {
+  background: #374151;
+}
+
+.dark .kpi-value {
+  color: #f3f4f6;
+}
+
+.dark .kpi-label {
+  color: #9ca3af;
+}
+
+.dark .kpi-divider {
+  background: #4b5563;
+}
+
+.dark .card-footer {
+  border-top-color: #374151;
+  background: #374151;
+}
+
+.dark .visita-id {
+  color: #6b7280;
+}
+
+.dark .empty-state {
+  color: #9ca3af;
+}
+
+.dark .empty-icon {
+  color: #4b5563;
+}
+
+.dark .empty-state h3 {
+  color: #9ca3af;
+}
 </style>

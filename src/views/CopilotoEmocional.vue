@@ -594,6 +594,7 @@ interface Proyecto {
   accionesPendientes: number;
   bienvenida: string;
   prompts: string[];
+  comunidades?: number;
 }
 
 interface Accion {
@@ -735,6 +736,7 @@ const proyectos = ref<Proyecto[]>([
     descripcion: 'Espiritualidad y proposito',
     icono: bookmarkOutline,
     comunidades: 3,
+    conversaciones: 3,
     accionesPendientes: 0,
     bienvenida: 'Tu vida espiritual es importante. Como estas?',
     prompts: [

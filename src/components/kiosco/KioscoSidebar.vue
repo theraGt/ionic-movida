@@ -101,4 +101,44 @@ const selectCategoria = (categoriaId: string | null) => {
   background: #E8913A;
   color: white;
 }
+
+/* Dark Mode */
+.dark .kiosco-sidebar {
+  background: #1f2937;
+  border-right-color: #374151;
+}
+
+.dark .categoria-item:hover {
+  background: #374151;
+}
+
+.dark .categoria-item.active {
+  background: #451a03;
+}
+
+.dark .categoria-item.all {
+  background: #374151;
+}
+
+.dark .categoria-item.all.active {
+  background: #451a03;
+}
+
+.dark .nombre {
+  color: #d1d5db;
+}
+
+.dark .categoria-item.active .nombre {
+  color: #f0a85a;
+}
+
+.dark .cantidad {
+  background: #374151;
+  color: #9ca3af;
+}
+
+.dark .categoria-item.active .cantidad {
+  background: #f0a85a;
+  color: #1f2937;
+}
 </style>

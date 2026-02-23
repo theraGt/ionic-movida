@@ -29,7 +29,8 @@ import {
     mapOutline,
     hardwareChip,
     newspaperOutline,
-    storefrontOutline
+    storefrontOutline,
+    heartCircleOutline
 } from 'ionicons/icons';
 
 const route = useRoute();
@@ -51,6 +52,7 @@ const navigateTo = (path: string) => {
 // Mapeo de items con iconos de Ionicons
 const navItems = [
     { icon: homeOutline, label: 'Inicio', path: '/home' },
+    { icon: heartCircleOutline, label: 'Copiloto', path: '/copiloto' },
     { icon: calendarOutline, label: 'Calendario', path: '/activities' },
     { icon: locationOutline, label: 'Visitas', path: '/visitas' },
     { icon: peopleOutline, label: 'Voluntarios', path: '/voluntarios' },
@@ -178,5 +180,35 @@ const navItems = [
         background: rgba(0, 0, 0, 0.3);
         z-index: 90;
     }
+}
+
+.dark .sidebar-rail {
+    background: #1f2937;
+    border-right-color: #374151;
+}
+
+.dark .nav-button {
+    color: #9ca3af;
+}
+
+.dark .nav-button:hover {
+    background: #374151;
+}
+
+.dark .nav-button.is-active {
+    background: #374151;
+    color: #f0a85a;
+}
+
+.dark .active-indicator {
+    background: #f0a85a;
+}
+
+.dark .icon-box-active {
+    background: #374151;
+}
+
+.dark .main-icon {
+    color: #f0a85a;
 }
 </style>

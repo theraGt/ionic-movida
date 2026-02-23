@@ -13,6 +13,9 @@
                 <ion-searchbar placeholder="Search Actividades Movida" class="custom-search"></ion-searchbar>
             </div>
             <ion-buttons slot="end">
+                <ion-button @click="toggleDarkMode" class="dark-mode-toggle">
+                    <ion-icon :icon="isDarkMode ? sunny : moon" slot="icon-only"></ion-icon>
+                </ion-button>
                 <ion-avatar>
                     <img alt="Silhouette of a person's head"
                         src="https://ionicframework.com/docs/img/demos/avatar.svg" />
@@ -33,8 +36,11 @@ import {
     IonAvatar
 } from '@ionic/vue';
 import { useLayout } from '@/composables/useLayout';
+import { useDarkMode } from '@/composables/useDarkMode';
+import { moon, sunny } from 'ionicons/icons';
 
 const { toggleSidebar } = useLayout();
+const { isDarkMode, toggleDarkMode } = useDarkMode();
 </script>
 
 <style scoped>
@@ -104,6 +110,33 @@ ion-avatar {
     width: 32px;
     height: 32px;
     margin-left: 8px;
+}
+
+.dark-mode-toggle {
+    --color: #6b7280;
+    margin-right: 8px;
+}
+
+.dark .header-toolbar {
+    --background: #1f2937;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.dark .logo-text {
+    color: #f3f4f6;
+}
+
+.dark .logo-subtext {
+    color: #9ca3af;
+}
+
+.dark .custom-search {
+    --background: #374151;
+    --placeholder-color: #9ca3af;
+}
+
+.dark .dark-mode-toggle {
+    --color: #9ca3af;
 }
 
 /* Media Query para ocultar texto en móviles pequeños */

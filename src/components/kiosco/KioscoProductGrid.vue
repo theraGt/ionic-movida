@@ -131,4 +131,26 @@ const productosAgrupados = computed<GrupoProductos[]>(() => {
   font-size: 14px;
   margin: 0;
 }
+
+/* Dark Mode */
+.dark .product-grid {
+  background: #111827;
+}
+
+.dark .categoria-header {
+  border-bottom-color: #374151;
+}
+
+.dark .categoria-nombre {
+  color: #f3f4f6;
+}
+
+.dark .categoria-cantidad {
+  background: #374151;
+  color: #9ca3af;
+}
+
+.dark .empty-state {
+  color: #9ca3af;
+}
 </style>

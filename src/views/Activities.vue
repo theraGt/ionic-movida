@@ -763,4 +763,47 @@ const activeFiltersCount = computed(() => {
         height: 30px;
     }
 }
+
+/* Dark Mode */
+.dark .main-container {
+    background-color: #111827;
+}
+
+.dark .page-title {
+    color: #f3f4f6;
+}
+
+.dark .card-container {
+    background: #1f2937;
+    border-color: #374151;
+}
+
+.dark .card-title {
+    color: #f3f4f6;
+}
+
+.dark .filter-section {
+    border-bottom-color: #374151;
+}
+
+.dark .filter-label {
+    color: #d1d5db;
+}
+
+.dark .filter-options ion-label {
+    color: #d1d5db;
+}
+
+.dark .custom-searchbar {
+    --background: #374151;
+}
+
+.dark .filter-footer {
+    border-top-color: #374151;
+    background: #1f2937;
+}
+
+.dark .expand-icon {
+    color: #9ca3af;
+}
 </style>

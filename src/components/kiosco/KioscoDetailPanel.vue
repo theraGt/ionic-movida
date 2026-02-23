@@ -501,4 +501,104 @@ const decrementarVenta = () => {
   height: 100%;
   object-fit: cover;
 }
+
+/* Dark Mode */
+.dark .detail-panel {
+  background: #1f2937;
+  border-left-color: #374151;
+}
+
+.dark .panel-header {
+  border-bottom-color: #374151;
+}
+
+.dark .action-btn {
+  color: #9ca3af;
+}
+
+.dark .action-btn:hover {
+  background: #374151;
+  color: #f3f4f6;
+}
+
+.dark .producto-imagen-container {
+  background: #111827;
+}
+
+.dark .imagen-wrapper {
+  background: #374151;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.dark .placeholder-imagen {
+  color: #4b5563;
+}
+
+.dark .producto-titulo {
+  color: #f3f4f6;
+}
+
+.dark .producto-estado {
+  color: #9ca3af;
+}
+
+.dark .producto-actions {
+  border-bottom-color: #374151;
+}
+
+.dark .btn-editar-texto {
+  color: #f0a85a;
+}
+
+.dark .btn-editar-texto:hover {
+  background: #451a03;
+}
+
+.dark .action-btn-icon {
+  color: #6b7280;
+}
+
+.dark .action-btn-icon:hover {
+  color: #d1d5db;
+}
+
+.dark .detalle-row {
+  border-bottom-color: #374151;
+}
+
+.dark .detalle-label {
+  color: #6b7280;
+}
+
+.dark .detalle-value {
+  color: #f3f4f6;
+}
+
+.dark .color-circle.selected {
+  border-color: #f3f4f6;
+}
+
+.dark .moneda {
+  color: #9ca3af;
+}
+
+.dark .detalle-input {
+  background: #374151;
+  border-color: #4b5563;
+  color: #f3f4f6;
+}
+
+.dark .btn-cantidad {
+  background: #374151;
+  border-color: #4b5563;
+  color: #d1d5db;
+}
+
+.dark .btn-cantidad:hover {
+  background: #4b5563;
+}
+
+.dark .foto-preview {
+  background: #374151;
+}
 </style>

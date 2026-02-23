@@ -1,7 +1,7 @@
 // src/services/llmService.ts
 import axios from 'axios';
 
-const API_URL = 'http://localhost:3030'; // Cambia esto por la URL de tu backend
+const API_URL = 'https://thera-ia-api-movida-app.9zx1zd.easypanel.host'; // Cambia esto por la URL de tu backend
 
 export interface CopilotoUser {
   id: number;
@@ -274,7 +274,7 @@ export const llmService = {
 
   // Copiloto Emocional con guía bíblica (actualizado con memoria)
   async copilotoEmocional(
-    texto: string, 
+    texto: string,
     categoria: string = 'salud',
     userId?: number,
     area?: string,

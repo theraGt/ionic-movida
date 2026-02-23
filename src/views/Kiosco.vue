@@ -428,4 +428,21 @@ const editarProducto = () => {
   overflow: hidden;
   background: #f9fafb;
 }
+
+/* Dark Mode */
+.dark .layout-container {
+  background: #111827;
+}
+
+.dark .breadcrumb .current {
+  color: #f3f4f6;
+}
+
+.dark .breadcrumb {
+  color: #9ca3af;
+}
+
+.dark .content-wrapper {
+  background: #111827;
+}
 </style>

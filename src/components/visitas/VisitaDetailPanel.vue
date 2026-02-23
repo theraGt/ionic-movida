@@ -1,7 +1,7 @@
 <template>
   <div class="detail-panel" :class="{ 'is-open': isOpen }">
     <div class="panel-backdrop" @click="closePanel"></div>
-    
+
     <div class="panel-content">
       <!-- Header Sticky -->
       <div class="panel-header" :class="{ 'is-scrolled': isScrolled }">
@@ -649,5 +649,80 @@ const formatDateTime = (dateStr: string | undefined) => {
 
 .panel-body::-webkit-scrollbar-thumb:hover {
   background: #9ca3af;
+}
+
+/* Dark Mode */
+.dark .panel-content {
+  background: #1f2937;
+  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.dark .panel-header {
+  background: #1f2937;
+  border-bottom-color: #374151;
+}
+
+.dark .panel-title {
+  color: #f3f4f6;
+}
+
+.dark .image-section {
+  background: #111827;
+}
+
+.dark .image-section.placeholder {
+  background: linear-gradient(135deg, #111827 0%, #1f2937 100%);
+}
+
+.dark .description-text {
+  color: #d1d5db;
+}
+
+.dark .info-item {
+  background: #374151;
+}
+
+.dark .info-value {
+  color: #f3f4f6;
+}
+
+.dark .info-value.coord {
+  color: #9ca3af;
+}
+
+.dark .metric-card {
+  background: #374151;
+}
+
+.dark .metric-value {
+  color: #f3f4f6;
+}
+
+.dark .expense-list {
+  background: #374151;
+}
+
+.dark .expense-label {
+  color: #d1d5db;
+}
+
+.dark .expense-value {
+  color: #f3f4f6;
+}
+
+.dark .expense-divider {
+  background: #4b5563;
+}
+
+.dark .panel-footer {
+  border-top-color: #374151;
+}
+
+.dark .panel-body::-webkit-scrollbar-thumb {
+  background: #4b5563;
+}
+
+.dark .panel-body::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
 }
 </style>

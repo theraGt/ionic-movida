@@ -53,8 +53,9 @@
 
             <div class="form-group full-width">
               <label class="form-label">Descripción</label>
-              <ion-textarea v-model="form.descripcion" rows="3" placeholder="Describe el propósito de la visita..."
-                class="custom-textarea"></ion-textarea>
+              <!-- eslint-disable-next-line vue/no-parsing-error -->
+              <ion-textarea v-model="(form as any).descripcion" :rows="3"
+                placeholder="Describe el propósito de la visita..." class="custom-textarea"></ion-textarea>
             </div>
           </div>
         </div>
@@ -332,7 +333,7 @@ const props = defineProps<{
 
 const emit = defineEmits(['close', 'save']);
 
-const form = ref<Partial<Visita>>({
+const form = ref({
   idActividad: '',
   inicio: new Date().toISOString(),
   coordenada: '',
@@ -810,5 +811,136 @@ const handleSubmit = async () => {
   .expenses-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+
+/* Dark Mode */
+.dark .visita-modal {
+  --background: #1f2937;
+}
+
+.dark .modal-header {
+  --background: linear-gradient(135deg, #f0a85a 0%, #d3944f 100%);
+}
+
+.dark .modal-header ion-toolbar {
+  --color: #1f2937;
+}
+
+.dark .close-button {
+  --color: #1f2937;
+}
+
+.dark .modal-content {
+  --background: #111827;
+}
+
+.dark .form-section {
+  background: #1f2937;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.dark .section-title {
+  color: #f3f4f6;
+}
+
+.dark .form-label {
+  color: #d1d5db;
+}
+
+.dark .input-wrapper,
+.dark .select-wrapper,
+.dark .datetime-wrapper {
+  background: #374151;
+}
+
+.dark .input-wrapper:focus-within,
+.dark .select-wrapper:focus-within,
+.dark .datetime-wrapper:focus-within {
+  background: #1f2937;
+}
+
+.dark .input-icon {
+  color: #6b7280;
+}
+
+.dark .custom-input,
+.dark .custom-select,
+.dark .custom-datetime,
+.dark .custom-textarea {
+  --placeholder-color: #6b7280;
+  --color: #f3f4f6;
+}
+
+.dark .custom-textarea {
+  background: #374151;
+}
+
+.dark .custom-textarea:focus-within {
+  background: #1f2937;
+}
+
+.dark .image-preview {
+  background: #374151;
+}
+
+.dark .metric-label {
+  color: #9ca3af;
+}
+
+.dark .metric-input-wrapper {
+  background: #374151;
+}
+
+.dark .metric-input-wrapper:focus-within {
+  background: #1f2937;
+}
+
+.dark .metric-icon {
+  color: #2dd4bf;
+}
+
+.dark .metric-input {
+  --color: #f3f4f6;
+}
+
+.dark .expense-label {
+  color: #9ca3af;
+}
+
+.dark .expense-label ion-icon {
+  color: #f87171;
+}
+
+.dark .expense-input-wrapper {
+  background: #450a0a;
+}
+
+.dark .expense-input-wrapper:focus-within {
+  background: #1f2937;
+}
+
+.dark .currency {
+  color: #f87171;
+}
+
+.dark .expense-input {
+  --color: #f3f4f6;
+}
+
+.dark .expense-total-card {
+  background: linear-gradient(135deg, #451a03 0%, #78350f 100%);
+  border-color: #f59e0b;
+}
+
+.dark .total-label {
+  color: #fcd34d;
+}
+
+.dark .total-amount {
+  color: #fcd34d;
+}
+
+.dark .form-actions {
+  border-top-color: #374151;
 }
 </style>

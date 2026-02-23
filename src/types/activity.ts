@@ -2,6 +2,7 @@ export interface Activity {
     id: string;
     fecha: string;
     hora: string;
+    horaInicio?: string;
     actividad: string;
     tipo: string;
     estado: string;

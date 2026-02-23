@@ -9,6 +9,7 @@ const MOCK_ACTIVITIES: Activity[] = [
     {
         id: '1',
         fecha: '2026-02-10T09:00:00',
+        hora: '09:00',
         horaInicio: '09:00',
         actividad: 'prueba',
         tipo: 'Personal',
@@ -18,6 +19,7 @@ const MOCK_ACTIVITIES: Activity[] = [
     {
         id: '2',
         fecha: '2026-02-12T15:00:00',
+        hora: '15:00',
         horaInicio: '15:00',
         actividad: 'Reunión Instituto',
         tipo: 'Reuniones',
@@ -27,6 +29,7 @@ const MOCK_ACTIVITIES: Activity[] = [
     {
         id: '3',
         fecha: '2026-02-05T10:00:00',
+        hora: '10:00',
         horaInicio: '10:00',
         actividad: 'Taller Evangelismo',
         tipo: 'Misiones',
@@ -36,6 +39,7 @@ const MOCK_ACTIVITIES: Activity[] = [
     {
         id: '4',
         fecha: '2026-02-28T09:00:00',
+        hora: '09:00',
         horaInicio: '09:00',
         actividad: 'Visita a Huehuetenango',
         tipo: 'Misiones',
@@ -45,6 +49,7 @@ const MOCK_ACTIVITIES: Activity[] = [
     {
         id: '5',
         fecha: '2026-02-28T14:00:00',
+        hora: '14:00',
         horaInicio: '14:00',
         actividad: 'Visita Huehuetenango',
         tipo: 'Misiones',
@@ -54,6 +59,7 @@ const MOCK_ACTIVITIES: Activity[] = [
     {
         id: '6',
         fecha: '2026-02-28T18:00:00',
+        hora: '18:00',
         horaInicio: '18:00',
         actividad: 'Visita Huehuetenango',
         tipo: 'Misiones',
@@ -124,9 +130,13 @@ export const blink = {
             }
         },
         voluntarios: {
-            list: async () => {
+            list: async (options?: { orderBy?: { fechaInscripcion: string } }) => {
                 await new Promise(resolve => setTimeout(resolve, 500));
-                return [...MOCK_VOLUNTARIOS];
+                let data = [...MOCK_VOLUNTARIOS];
+                if (options?.orderBy?.fechaInscripcion === 'desc') {
+                    data.sort((a, b) => new Date(b.fechaInscripcion).getTime() - new Date(a.fechaInscripcion).getTime());
+                }
+                return data;
             },
             create: async (voluntario: Partial<Voluntario>) => {
                 await new Promise(resolve => setTimeout(resolve, 500));

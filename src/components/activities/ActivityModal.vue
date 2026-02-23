@@ -99,7 +99,7 @@
 
             <div class="form-group full-width">
               <label class="form-label">Comentario</label>
-              <ion-textarea v-model="form.comentario" rows="3"
+              <ion-textarea v-model="comentarioModel" :rows="3"
                 placeholder="Agregar detalles adicionales sobre la actividad..." class="custom-textarea"></ion-textarea>
             </div>
           </div>
@@ -150,7 +150,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, watch } from 'vue';
+import { ref, watch, computed } from 'vue';
 import {
   IonModal,
   IonHeader,
@@ -192,7 +192,15 @@ const props = defineProps<{
 
 const emit = defineEmits(['close', 'save']);
 
-const form = ref<Partial<Activity>>({
+const form = ref<{
+  actividad: string;
+  tipo: string;
+  estado: string;
+  fecha: string;
+  hora: string;
+  pais: string;
+  comentario?: string;
+}>({
   actividad: '',
   tipo: 'Personal',
   estado: 'Pendiente',
@@ -200,6 +208,11 @@ const form = ref<Partial<Activity>>({
   hora: '09:00',
   pais: 'Guatemala',
   comentario: ''
+});
+
+const comentarioModel = computed({
+  get: () => form.value.comentario || '',
+  set: (val: string) => { form.value.comentario = val; }
 });
 
 const resetForm = () => {
@@ -232,8 +245,8 @@ const handleClose = () => {
 
 const handleSubmit = async () => {
   try {
-    const horaValue = typeof form.value.hora === 'string' && form.value.hora.includes(':') 
-      ? form.value.hora 
+    const horaValue = typeof form.value.hora === 'string' && form.value.hora.includes(':')
+      ? form.value.hora
       : '09:00';
 
     const formData = {
@@ -469,5 +482,72 @@ const handleSubmit = async () => {
   .form-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* Dark Mode */
+.dark .activity-modal {
+  --background: #1f2937;
+}
+
+.dark .modal-header {
+  --background: linear-gradient(135deg, #f0a85a 0%, #d3944f 100%);
+}
+
+.dark .modal-header ion-toolbar {
+  --color: #1f2937;
+}
+
+.dark .close-button {
+  --color: #1f2937;
+}
+
+.dark .modal-content {
+  --background: #111827;
+}
+
+.dark .form-section {
+  background: #1f2937;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.dark .section-title {
+  color: #f3f4f6;
+}
+
+.dark .form-label {
+  color: #d1d5db;
+}
+
+.dark .input-wrapper,
+.dark .select-wrapper {
+  background: #374151;
+}
+
+.dark .input-wrapper:focus-within,
+.dark .select-wrapper:focus-within {
+  background: #1f2937;
+}
+
+.dark .input-icon {
+  color: #6b7280;
+}
+
+.dark .custom-input,
+.dark .custom-select,
+.dark .custom-textarea {
+  --placeholder-color: #6b7280;
+  --color: #f3f4f6;
+}
+
+.dark .custom-textarea {
+  background: #374151;
+}
+
+.dark .custom-textarea:focus-within {
+  background: #1f2937;
+}
+
+.dark .form-actions {
+  border-top-color: #374151;
 }
 </style>

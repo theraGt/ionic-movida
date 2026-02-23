@@ -1,7 +1,7 @@
 <template>
   <div class="detail-panel" :class="{ 'is-open': isOpen }">
     <div class="panel-backdrop" @click="closePanel"></div>
-    
+
     <div class="panel-content">
       <!-- Header -->
       <div class="panel-header">
@@ -27,16 +27,11 @@
             </span>
             <ion-icon :icon="chevronDownOutline" class="status-chevron"></ion-icon>
           </div>
-          
+
           <!-- Menú de estados -->
           <div v-if="showStatusMenu" class="status-menu">
-            <div 
-              v-for="estado in estadosOptions" 
-              :key="estado"
-              class="status-option"
-              :class="{ 'active': activity?.estado === estado }"
-              @click="changeStatus(estado)"
-            >
+            <div v-for="estado in estadosOptions" :key="estado" class="status-option"
+              :class="{ 'active': activity?.estado === estado }" @click="changeStatus(estado)">
               <span class="status-dot" :class="getStatusClass(estado)"></span>
               <span class="status-text">{{ estado }}</span>
             </div>
@@ -141,7 +136,7 @@ const handleDelete = () => {
   emit('delete', props.activity?.id);
 };
 
-const getTipoClass = (tipo: string) => {
+const getTipoClass = (tipo: string | undefined) => {
   const t = tipo?.toLowerCase();
   if (t === 'personal') return 'tipo-personal';
   if (t === 'reuniones') return 'tipo-reuniones';
@@ -153,7 +148,7 @@ const getTipoClass = (tipo: string) => {
   return 'tipo-otro';
 };
 
-const getStatusClass = (estado: string) => {
+const getStatusClass = (estado: string | undefined) => {
   const e = estado?.toLowerCase();
   if (e === 'pendiente') return 'estado-pendiente';
   if (e === 'completado') return 'estado-completado';
@@ -161,7 +156,7 @@ const getStatusClass = (estado: string) => {
   return 'estado-otro';
 };
 
-const formatDate = (dateStr: string) => {
+const formatDate = (dateStr: string | undefined) => {
   if (!dateStr) return '-';
   const date = new Date(dateStr);
   return date.toLocaleDateString('es-GT', {
@@ -171,7 +166,7 @@ const formatDate = (dateStr: string) => {
   });
 };
 
-const formatTime = (timeStr: string) => {
+const formatTime = (timeStr: string | undefined) => {
   if (!timeStr) return '-';
   if (timeStr.includes(':')) {
     const [hours, minutes] = timeStr.split(':');
@@ -512,5 +507,61 @@ const formatTime = (timeStr: string) => {
 
 .panel-body::-webkit-scrollbar-thumb:hover {
   background: #9ca3af;
+}
+
+/* Dark Mode */
+.dark .panel-content {
+  background: #1f2937;
+  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.dark .panel-header {
+  border-bottom-color: #374151;
+}
+
+.dark .panel-title {
+  color: #f3f4f6;
+}
+
+.dark .status-selector:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark .status-menu {
+  background: #1f2937;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.dark .status-option:hover,
+.dark .status-option.active {
+  background-color: #374151;
+}
+
+.dark .status-text {
+  color: #d1d5db;
+}
+
+.dark .description-text {
+  color: #d1d5db;
+}
+
+.dark .info-item {
+  background: #374151;
+}
+
+.dark .info-value {
+  color: #f3f4f6;
+}
+
+.dark .panel-footer {
+  border-top-color: #374151;
+}
+
+.dark .panel-body::-webkit-scrollbar-thumb {
+  background: #4b5563;
+}
+
+.dark .panel-body::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
 }
 </style>

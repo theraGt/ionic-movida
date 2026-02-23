@@ -519,4 +519,84 @@ const handleDelete = async (id: string) => {
     grid-template-columns: 1fr;
   }
 }
+
+/* Dark Mode */
+.dark .filters-sidebar {
+  background: #1f2937;
+  border-color: #374151;
+}
+
+.dark .filter-btn:hover {
+  background: #374151;
+}
+
+.dark .filter-btn.active {
+  background: #451a03;
+}
+
+.dark .filter-label {
+  color: #d1d5db;
+}
+
+.dark .filter-btn.active .filter-label {
+  color: #f0a85a;
+}
+
+.dark .filter-count {
+  background: #374151;
+  color: #9ca3af;
+}
+
+.dark .filter-btn.active .filter-count {
+  background: #78350f;
+  color: #f0a85a;
+}
+
+.dark .region-title {
+  color: #f3f4f6;
+}
+
+.dark .region-count {
+  background: #374151;
+  color: #9ca3af;
+}
+
+.dark .region-header {
+  border-bottom-color: #374151;
+}
+
+.dark .voluntario-card {
+  background: #1f2937;
+  border-color: #374151;
+}
+
+.dark .voluntario-card:hover {
+  border-color: #4b5563;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.dark .voluntario-card.is-selected {
+  border-color: #f0a85a;
+  background: #451a03;
+}
+
+.dark .voluntario-nombre {
+  color: #f3f4f6;
+}
+
+.dark .voluntario-iglesia {
+  color: #9ca3af;
+}
+
+.dark .empty-state {
+  color: #9ca3af;
+}
+
+.dark .empty-icon {
+  color: #4b5563;
+}
+
+.dark .empty-state h3 {
+  color: #9ca3af;
+}
 </style>

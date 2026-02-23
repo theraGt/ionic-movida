@@ -766,4 +766,65 @@ ion-radio {
     --height: 100%;
   }
 }
+
+/* Dark Mode */
+.dark .filter-modal {
+  --background: #1f2937;
+}
+
+.dark .filter-content {
+  --background: #111827;
+}
+
+.dark .filter-item {
+  border-bottom-color: #374151;
+}
+
+.dark .filter-item-label {
+  color: #f3f4f6;
+}
+
+.dark .filter-item-arrow {
+  color: #6b7280;
+}
+
+.dark .filter-item-options {
+  background: #1f2937;
+}
+
+.dark .filter-searchbar {
+  --background: #374151;
+}
+
+.dark .date-field label {
+  color: #9ca3af;
+}
+
+.dark .range-field label {
+  color: #9ca3af;
+}
+
+.dark .range-field ion-input {
+  --background: #374151;
+  border-color: #4b5563;
+  color: #f3f4f6;
+}
+
+.dark .filter-footer {
+  border-top-color: #374151;
+  background: #1f2937;
+}
+
+.dark ion-item {
+  --background: transparent;
+}
+
+.dark ion-checkbox {
+  --checkbox-background: #374151;
+  --border-color: #4b5563;
+}
+
+.dark ion-radio {
+  --color: #6b7280;
+}
 </style>

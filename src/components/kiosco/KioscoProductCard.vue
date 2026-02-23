@@ -160,4 +160,44 @@ defineEmits<{
   background: #f3f4f6;
   color: #374151;
 }
+
+/* Dark Mode */
+.dark .producto-card {
+  background: #1f2937;
+  border-color: #374151;
+}
+
+.dark .producto-card:hover {
+  border-color: #f0a85a;
+}
+
+.dark .producto-card.selected {
+  border-color: #f0a85a;
+  background: #451a03;
+}
+
+.dark .producto-imagen {
+  background: #374151;
+}
+
+.dark .placeholder-imagen {
+  color: #6b7280;
+}
+
+.dark .producto-nombre {
+  color: #f3f4f6;
+}
+
+.dark .producto-categoria {
+  color: #9ca3af;
+}
+
+.dark .menu-btn {
+  color: #6b7280;
+}
+
+.dark .menu-btn:hover {
+  background: #374151;
+  color: #f3f4f6;
+}
 </style>

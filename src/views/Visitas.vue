@@ -570,4 +570,45 @@ const handleSave = async () => {
     min-width: auto;
   }
 }
+
+/* Dark Mode */
+.dark .main-container {
+  background-color: #111827;
+}
+
+.dark .page-title {
+  color: #f3f4f6;
+}
+
+.dark .filter-panel {
+  background: #1f2937;
+  border-color: #374151;
+}
+
+.dark .filter-panel-header {
+  border-bottom-color: #374151;
+}
+
+.dark .filter-panel-header h3 {
+  color: #f3f4f6;
+}
+
+.dark .filter-label {
+  color: #9ca3af;
+}
+
+.dark .filter-select {
+  --background: #374151;
+  --border-color: #4b5563;
+  --color: #f3f4f6;
+}
+
+.dark .card-container {
+  background: #1f2937;
+  border-color: #374151;
+}
+
+.dark .card-title {
+  color: #f3f4f6;
+}
 </style>

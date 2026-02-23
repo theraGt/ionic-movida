@@ -1,7 +1,7 @@
 <template>
   <div class="detail-panel" :class="{ 'is-open': isOpen }">
     <div class="panel-backdrop" @click="closePanel"></div>
-    
+
     <div class="panel-content">
       <!-- Header -->
       <div class="panel-header">
@@ -30,17 +30,12 @@
         <!-- Foto y nombre -->
         <div class="profile-section">
           <div class="profile-image-container">
-            <img
-              v-if="voluntario.foto"
-              :src="voluntario.foto"
-              :alt="voluntario.nombreCompleto"
-              class="profile-image"
-            />
+            <img v-if="voluntario.foto" :src="voluntario.foto" :alt="voluntario.nombreCompleto" class="profile-image" />
             <div v-else class="profile-image-placeholder">
               <ion-icon :icon="personOutline" class="profile-placeholder-icon"></ion-icon>
             </div>
           </div>
-          
+
           <div class="profile-info">
             <h3 class="profile-name">{{ voluntario.nombreCompleto }}</h3>
             <p class="profile-iglesia">{{ voluntario.iglesia }}</p>
@@ -159,17 +154,20 @@
             </div>
             <div class="data-row">
               <span class="data-label">FACEBOOK</span>
-              <a v-if="voluntario.facebook" :href="voluntario.facebook" target="_blank" class="data-value link">{{ truncateUrl(voluntario.facebook) }}</a>
+              <a v-if="voluntario.facebook" :href="voluntario.facebook" target="_blank" class="data-value link">{{
+                truncateUrl(voluntario.facebook) }}</a>
               <span v-else class="data-value">-</span>
             </div>
             <div class="data-row">
               <span class="data-label">INSTAGRAM</span>
-              <a v-if="voluntario.instagram" :href="voluntario.instagram" target="_blank" class="data-value link">{{ truncateUrl(voluntario.instagram) }}</a>
+              <a v-if="voluntario.instagram" :href="voluntario.instagram" target="_blank" class="data-value link">{{
+                truncateUrl(voluntario.instagram) }}</a>
               <span v-else class="data-value">-</span>
             </div>
             <div class="data-row">
               <span class="data-label">TIKTOK</span>
-              <a v-if="voluntario.tiktok" :href="voluntario.tiktok" target="_blank" class="data-value link">{{ truncateUrl(voluntario.tiktok) }}</a>
+              <a v-if="voluntario.tiktok" :href="voluntario.tiktok" target="_blank" class="data-value link">{{
+                truncateUrl(voluntario.tiktok) }}</a>
               <span v-else class="data-value">-</span>
             </div>
           </div>
@@ -609,5 +607,65 @@ const truncateUrl = (url: string) => {
 
 .panel-body::-webkit-scrollbar-thumb:hover {
   background: #9ca3af;
+}
+
+/* Dark Mode */
+.dark .panel-content {
+  background: #1f2937;
+  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.dark .panel-header {
+  background: #1f2937;
+  border-bottom-color: #374151;
+}
+
+.dark .panel-title {
+  color: #f3f4f6;
+}
+
+.dark .profile-name {
+  color: #f3f4f6;
+}
+
+.dark .profile-iglesia {
+  color: #9ca3af;
+}
+
+.dark .document-item {
+  background: #374151;
+}
+
+.dark .section-title {
+  border-bottom-color: #374151;
+  color: #f3f4f6;
+}
+
+.dark .data-label {
+  color: #9ca3af;
+}
+
+.dark .data-value {
+  color: #d1d5db;
+}
+
+.dark .empty-state-large {
+  color: #9ca3af;
+}
+
+.dark .empty-icon-large {
+  color: #4b5563;
+}
+
+.dark .empty-state-large h3 {
+  color: #9ca3af;
+}
+
+.dark .panel-body::-webkit-scrollbar-thumb {
+  background: #4b5563;
+}
+
+.dark .panel-body::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
 }
 </style>

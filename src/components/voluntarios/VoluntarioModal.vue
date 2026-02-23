@@ -1163,4 +1163,118 @@ ion-content::part(scroll)::-webkit-scrollbar-thumb {
 ion-content::part(scroll)::-webkit-scrollbar-thumb:hover {
   background: #94a3b8;
 }
+
+/* Dark Mode */
+.dark .voluntario-modal {
+  --background: #1f2937;
+}
+
+.dark .modal-header {
+  --background: linear-gradient(135deg, #f0a85a 0%, #d3944f 100%);
+}
+
+.dark .modal-header ion-toolbar {
+  --color: #1f2937;
+}
+
+.dark .title-main {
+  color: #1f2937;
+}
+
+.dark .title-subtitle {
+  color: #4b5563;
+}
+
+.dark .close-button {
+  --color: #1f2937;
+  --background: rgba(31, 41, 55, 0.15);
+  --background-hover: rgba(31, 41, 55, 0.25);
+}
+
+.dark .modal-content {
+  --background: #111827;
+}
+
+.dark .form-section {
+  background: #1f2937;
+  border-color: #374151;
+}
+
+.dark .section-header {
+  border-bottom-color: #451a03;
+}
+
+.dark .section-title {
+  color: #f3f4f6;
+}
+
+.dark .section-subtitle {
+  color: #9ca3af;
+}
+
+.dark .form-label {
+  color: #d1d5db;
+}
+
+.dark .input-wrapper,
+.dark .select-wrapper {
+  background: #374151;
+  border-color: #4b5563;
+}
+
+.dark .input-wrapper:hover,
+.dark .select-wrapper:hover {
+  border-color: #6b7280;
+  background: #4b5563;
+}
+
+.dark .input-wrapper:focus-within,
+.dark .select-wrapper:focus-within {
+  background: #1f2937;
+}
+
+.dark .input-icon {
+  color: #6b7280;
+}
+
+.dark .custom-input,
+.dark .custom-select {
+  --placeholder-color: #6b7280;
+  --color: #f3f4f6;
+}
+
+.dark .custom-textarea {
+  background: #374151;
+  border-color: #4b5563;
+  --placeholder-color: #6b7280;
+  --color: #f3f4f6;
+}
+
+.dark .custom-textarea:hover {
+  background: #4b5563;
+}
+
+.dark .custom-textarea:focus-within {
+  background: #1f2937;
+}
+
+.dark .form-actions {
+  border-top-color: #374151;
+}
+
+.dark ion-content::part(scroll) {
+  scrollbar-color: #4b5563 #1f2937;
+}
+
+.dark ion-content::part(scroll)::-webkit-scrollbar-track {
+  background: #1f2937;
+}
+
+.dark ion-content::part(scroll)::-webkit-scrollbar-thumb {
+  background: #4b5563;
+}
+
+.dark ion-content::part(scroll)::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
 </style>

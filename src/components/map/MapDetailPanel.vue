@@ -470,4 +470,66 @@ const formatDate = (dateStr: string | undefined) => {
 .panel-body::-webkit-scrollbar-thumb:hover {
   background: #9ca3af;
 }
+
+/* Dark Mode */
+.dark .panel-content {
+  background: #1f2937;
+}
+
+.dark .panel-header {
+  border-bottom-color: #374151;
+}
+
+.dark .panel-title {
+  color: #f3f4f6;
+}
+
+.dark .panel-subtitle {
+  color: #6b7280;
+}
+
+.dark .section-title {
+  color: #9ca3af;
+}
+
+.dark .info-item {
+  background: #374151;
+}
+
+.dark .info-icon {
+  color: #f0a85a;
+}
+
+.dark .info-label {
+  color: #6b7280;
+}
+
+.dark .info-value {
+  color: #f3f4f6;
+}
+
+.dark .info-value.coord {
+  color: #9ca3af;
+}
+
+.dark .action-btn {
+  --border-color: #374151;
+  --color: #d1d5db;
+}
+
+.dark .action-btn:hover {
+  --background: #374151;
+}
+
+.dark .panel-footer {
+  border-top-color: #374151;
+}
+
+.dark .panel-body::-webkit-scrollbar-thumb {
+  background: #4b5563;
+}
+
+.dark .panel-body::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
 </style>

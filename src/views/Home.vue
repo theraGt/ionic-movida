@@ -1452,4 +1452,154 @@ onMounted(() => {
         margin-top: 16px;
     }
 }
+
+/* Dark Mode */
+.dark .main-container {
+    background-color: #111827;
+}
+
+.dark .page-title {
+    color: #f3f4f6;
+}
+
+.dark .stat-card {
+    background: #1f2937;
+    border-color: #374151;
+}
+
+.dark .stat-value {
+    color: #f3f4f6;
+}
+
+.dark .stat-label {
+    color: #9ca3af;
+}
+
+.dark .chart-card {
+    background: #1f2937;
+    border-color: #374151;
+}
+
+.dark .chart-title {
+    color: #f3f4f6;
+}
+
+.dark .period-badge {
+    background: #374151;
+    color: #9ca3af;
+}
+
+.dark .period-badge.active {
+    background: #f0a85a;
+    color: #1f2937;
+}
+
+.dark .bar-value {
+    color: #9ca3af;
+}
+
+.dark .chart-labels {
+    color: #6b7280;
+}
+
+.dark .pie-center,
+.dark .donut-center {
+    background: #1f2937;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.dark .pie-total,
+.dark .donut-total {
+    color: #f3f4f6;
+}
+
+.dark .legend-label {
+    color: #d1d5db;
+}
+
+.dark .legend-value {
+    color: #9ca3af;
+}
+
+.dark .status-bar-container {
+    background: #374151;
+}
+
+.dark .status-label {
+    color: #d1d5db;
+}
+
+.dark .status-count {
+    color: #f3f4f6;
+}
+
+.dark .card-container {
+    background: #1f2937;
+    border-color: #374151;
+}
+
+.dark .card-title {
+    color: #f3f4f6;
+}
+
+.dark .clickable-item {
+    background: #374151;
+}
+
+.dark .clickable-item:hover {
+    background: #4b5563;
+}
+
+.dark .item-title {
+    color: #f3f4f6;
+}
+
+.dark .item-meta {
+    color: #9ca3af;
+}
+
+.dark .meta-date {
+    color: #6b7280;
+}
+
+.dark .meta-divider {
+    color: #4b5563;
+}
+
+.dark .meta-type {
+    background: #374151;
+    color: #d1d5db;
+}
+
+.dark .item-arrow {
+    color: #4b5563;
+}
+
+.dark .visit-card {
+    background: #374151;
+}
+
+.dark .visit-title {
+    color: #f3f4f6;
+}
+
+.dark .visit-date {
+    color: #9ca3af;
+}
+
+.dark .visit-meta {
+    color: #9ca3af;
+}
+
+.dark .visit-stats {
+    border-top-color: #4b5563;
+}
+
+.dark .donut-chart {
+    background: #374151;
+}
+
+.dark .empty-state {
+    color: #6b7280;
+}
 </style>
